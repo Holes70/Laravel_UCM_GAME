@@ -17097,25 +17097,33 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 var _data = [{
   "id": 1,
-  "nazov": "Otazka???",
+  "otazka": "Testovacia otazka cislo 1",
   "typ": 1,
   "odpovede": [{
     "id": 1,
-    "odpoved": "Odpoved 1"
+    "odpoved": "Ostrov"
   }, {
     "id": 2,
-    "odpoved": "Odpoved 2"
+    "odpoved": "Lod"
   }]
 }, {
   "id": 2,
-  "nazov": "Otazka???",
+  "otazka": "10 + 10 = ?",
+  "typ": 1,
+  "odpovede": [{
+    "id": 1,
+    "odpoved": "20"
+  }]
+}, {
+  "id": 3,
+  "otazka": "Testovacia otazka cislo 2",
   "typ": 2,
   "odpovede": [{
     "odpoved": "Odpoved 1",
-    "typ": "spravne"
+    "typ": true
   }, {
     "odpoved": "Odpoved 2",
-    "typ": "nespravne"
+    "typ": false
   }]
 }];
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -17200,7 +17208,9 @@ var _hoisted_2 = {
 var _hoisted_3 = ["onClick"];
 
 var _hoisted_4 = /*#__PURE__*/_withScopeId(function () {
-  return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", null, "DELETE", -1
+  return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
+    "class": "fas fa-trash-alt"
+  }, null, -1
   /* HOISTED */
   );
 });
@@ -17220,7 +17230,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       key: item
     }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h2", null, "Otázka č. " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(item.id), 1
     /* TEXT */
-    ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)((0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(item.typ) + " ", 1
+    ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)((0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(item.otazka) + " ", 1
     /* TEXT */
     ), item.typ == 1 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_2, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)(item.odpovede, function (odpoved) {
       return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("p", {
@@ -17251,7 +17261,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       onClick: function onClick($event) {
         return $options.addAnswer(item.id);
       },
-      "class": "btn btn-primary"
+      "class": "btn btn-primary ml-5"
     }, "Pridať odpoveď", 8
     /* PROPS */
     , _hoisted_6)])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)]), _hoisted_7]);

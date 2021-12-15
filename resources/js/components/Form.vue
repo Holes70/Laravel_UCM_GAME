@@ -4,7 +4,7 @@
       <div v-for="item in data" :key="item">
         <h2>Otázka č. {{ item.id }}</h2>
         <div>
-          {{ item.typ }}
+          {{ item.otazka }}
           <div v-if="item.typ == 1">
             <template v-for="odpoved in item.odpovede" :key="odpoved">
               <p class="lead">
@@ -14,14 +14,14 @@
                   class="btn btn-warning"
                   style="float:right;"
                 >
-                  <i>DELETE</i>
+                  <i class="fas fa-trash-alt"></i>
                 </button>
               </p>
             </template>
             <input v-model="newAnswer"/>
             <button 
               @click="addAnswer(item.id)" 
-              class="btn btn-primary"
+              class="btn btn-primary ml-5"
             >Pridať odpoveď</button>
           </div>
         </div>
@@ -35,20 +35,28 @@
 var data = [
   {
     "id": 1,
-    "nazov": "Otazka???",
+    "otazka": "Testovacia otazka cislo 1",
     "typ": 1,
     "odpovede": [
-      {"id": 1, "odpoved": "Odpoved 1"},
-      {"id": 2, "odpoved": "Odpoved 2"},
+      {"id": 1, "odpoved": "Ostrov"},
+      {"id": 2, "odpoved": "Lod"},
     ]
   },
   {
     "id": 2,
-    "nazov": "Otazka???",
+    "otazka": "10 + 10 = ?",
+    "typ": 1,
+    "odpovede": [
+      {"id": 1, "odpoved": "20"}
+    ]
+  },
+  {
+    "id": 3,
+    "otazka": "Testovacia otazka cislo 2",
     "typ": 2,
     "odpovede": [
-      {"odpoved": "Odpoved 1","typ": "spravne"},
-      {"odpoved": "Odpoved 2","typ": "nespravne"},
+      {"odpoved": "Odpoved 1","typ": true},
+      {"odpoved": "Odpoved 2","typ": false},
     ]
   }
 ];

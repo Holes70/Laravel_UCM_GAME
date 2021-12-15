@@ -12,16 +12,17 @@
 	<div id="app">
 		<div class="container pt-5">
 			<div class="card">
-				<h5 class="card-header">Featured</h5>
+				<h5 class="card-header"></h5>
 				<div class="card-body">
 					<p class="card-text">
 						<form-vue></form-vue>
 					</p>
-					<a href="#" class="btn btn-primary">Go somewhere</a>
+					<a href="#" class="btn btn-primary">Pridať otázku</a>
 				</div>
 			</div>	
 		</div>
 	</div>
 	<script src="{{ asset('js/app.js') }}"></script>
+	<script src='https://kit.fontawesome.com/e11c679b37.js' crossorigin='anonymous'></script>
 </body>
 </html>
