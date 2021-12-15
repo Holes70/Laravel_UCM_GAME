@@ -38,8 +38,8 @@ var data = [
     "nazov": "Otazka???",
     "typ": 1,
     "odpovede": [
-      {"odpoved": "Odpoved 1"},
-      {"odpoved": "Odpoved 2"},
+      {"id": 1, "odpoved": "Odpoved 1"},
+      {"id": 2, "odpoved": "Odpoved 2"},
     ]
   },
   {
@@ -73,7 +73,9 @@ export default {
       this.data.forEach((item) => {
         if (item.id == questionId) {
           item['odpovede'].forEach((odpoved, index) => {
-            item['odpovede'].splice(index, 1);
+            if (odpoved.id == answerId) {
+              item['odpovede'].splice(index, 1);
+            }
           })
         }
       })

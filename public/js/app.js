@@ -17100,8 +17100,10 @@ var _data = [{
   "nazov": "Otazka???",
   "typ": 1,
   "odpovede": [{
+    "id": 1,
     "odpoved": "Odpoved 1"
   }, {
+    "id": 2,
     "odpoved": "Odpoved 2"
   }]
 }, {
@@ -17140,7 +17142,9 @@ var _data = [{
       this.data.forEach(function (item) {
         if (item.id == questionId) {
           item['odpovede'].forEach(function (odpoved, index) {
-            item['odpovede'].splice(index, 1);
+            if (odpoved.id == answerId) {
+              item['odpovede'].splice(index, 1);
+            }
           });
         }
       });
