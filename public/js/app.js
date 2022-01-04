@@ -17119,9 +17119,11 @@ var _data = [{
   "otazka": "Testovacia otazka cislo 2",
   "typ": 2,
   "odpovede": [{
+    "id": 1,
     "odpoved": "Odpoved 1",
     "typ": true
   }, {
+    "id": 2,
     "odpoved": "Odpoved 2",
     "typ": false
   }]

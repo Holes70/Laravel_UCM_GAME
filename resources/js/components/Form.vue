@@ -55,8 +55,8 @@ var data = [
     "otazka": "Testovacia otazka cislo 2",
     "typ": 2,
     "odpovede": [
-      {"odpoved": "Odpoved 1","typ": true},
-      {"odpoved": "Odpoved 2","typ": false},
+      {"id": 1, "odpoved": "Odpoved 1","typ": true},
+      {"id": 2, "odpoved": "Odpoved 2","typ": false},
     ]
   }
 ];
