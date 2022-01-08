@@ -37,6 +37,7 @@ var data = [
     "id": 1,
     "otazka": "Testovacia otazka cislo 1",
     "typ": 1,
+    "napoveda": "default.jpg",
     "odpovede": [
       {"id": 1, "odpoved": "Ostrov"},
       {"id": 2, "odpoved": "Lod"},
